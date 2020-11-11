@@ -54,7 +54,7 @@ class Server:
                         for conn in self.connections:
                             conn.send(bytes(message, self.FORMAT))
 
-            # handle user exit
+            # handle user exit with connection error
             except ConnectionResetError:
                 print(self.users.get(address), "has left the chat")
                 self.active_names.remove(self.users.get(address))
@@ -63,6 +63,19 @@ class Server:
                 for conn in self.connections:
                     if conn != connection:
                         conn.send(bytes(f'{self.users.get(address)} has left the chat{self.clients_list}', self.FORMAT))
+                connection.close()
+                break
+
+            # handle user exit
+            if not data:
+                print(self.users.get(address), "has left the chat")
+                self.active_names.remove(self.users.get(address))
+                self.update_clients()
+                self.connections.remove(connection)
+                for conn in self.connections:
+                    if conn != connection:
+                        conn.send(
+                            bytes(f'{self.users.get(address)} has left the chat{self.clients_list}', self.FORMAT))
                 connection.close()
                 break
 
