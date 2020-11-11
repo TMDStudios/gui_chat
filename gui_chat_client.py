@@ -1,6 +1,7 @@
 import socket
 import threading
 from tkinter import *
+from time import sleep
 
 
 class Client:
@@ -133,6 +134,8 @@ def name_entry(controller, name):
         client.user_accepted = True
         controller.show_frame(gui.chat_window)
         client.username = name
+        # allow socket to process new user
+        sleep(.25)
         gui.chat_window.my_msg.set('^name^' + name)
         client.send_message()
 
