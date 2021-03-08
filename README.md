@@ -15,4 +15,6 @@ Android:  https://play.google.com/store/apps/details?id=com.tmdstudios.python
 
 iOS:  https://apps.apple.com/us/app/py-learning-companion/id1535395962
 
+Amazon: https://www.amazon.com/dp/B08RLPC9LR
+
 For more information, visit https://tmdstudios.wordpress.com/py-learning-companion/
