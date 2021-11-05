@@ -13,7 +13,7 @@ Py Learning Companion is available on Android and iOS.
 
 Android:  https://play.google.com/store/apps/details?id=com.tmdstudios.python
 
-iOS:  https://apps.apple.com/us/app/py-learning-companion/id1535395962
+iOS:  Temporarily Unavailable
 
 Amazon: https://www.amazon.com/dp/B08RLPC9LR
 
